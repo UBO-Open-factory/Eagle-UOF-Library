@@ -702,10 +702,6 @@ Source: http://www.maxstream.net/products/xbee/datasheet_XBee_OEM_RF-Modules.pdf
 <pad name="GND1" x="8.89" y="16.51" drill="0.8128" diameter="1.6256" rot="R90"/>
 <pad name="GND2" x="11.43" y="16.51" drill="0.8128" diameter="1.6256" rot="R90"/>
 <pad name="BAT" x="13.97" y="16.51" drill="0.8128" diameter="1.6256" rot="R90"/>
-<pad name="P$1" x="2.54" y="16.51" drill="3.048" diameter="3.556" thermals="no"/>
-<pad name="P$2" x="17.78" y="16.51" drill="3.048" diameter="3.556" thermals="no"/>
-<pad name="P$3" x="17.78" y="2.54" drill="3.048" diameter="3.556" thermals="no"/>
-<pad name="P$4" x="2.54" y="2.54" drill="3.048" diameter="3.556" thermals="no"/>
 <text x="0.508" y="19.812" size="1.27" layer="21">&gt;VALUE</text>
 <text x="0.508" y="21.844" size="1.27" layer="21">&gt;NAME</text>
 <wire x1="0" y1="16.51" x2="2.54" y2="19.05" width="0.127" layer="21" curve="-90"/>
@@ -716,6 +712,10 @@ Source: http://www.maxstream.net/products/xbee/datasheet_XBee_OEM_RF-Modules.pdf
 <wire x1="17.78" y1="0" x2="2.54" y2="0" width="0.127" layer="21"/>
 <wire x1="2.54" y1="0" x2="0" y2="2.54" width="0.127" layer="21" curve="-90"/>
 <wire x1="0" y1="2.54" x2="0" y2="16.51" width="0.127" layer="21"/>
+<circle x="2.54" y="16.51" radius="1.79605" width="0.127" layer="21"/>
+<circle x="17.78" y="16.51" radius="1.79605" width="0.127" layer="21"/>
+<circle x="2.54" y="2.54" radius="1.79605" width="0.127" layer="21"/>
+<circle x="17.78" y="2.54" radius="1.79605" width="0.127" layer="21"/>
 </package>
 <package name="SOT95P237X112-3N">
 <wire x1="0.7112" y1="0.5842" x2="0.7112" y2="1.524" width="0.1524" layer="21"/>
