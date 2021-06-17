@@ -830,6 +830,24 @@ Source: http://www.maxstream.net/products/xbee/datasheet_XBee_OEM_RF-Modules.pdf
 <text x="0.5" y="30.5" size="1.27" layer="21">&gt;VALUE</text>
 <rectangle x1="0" y1="7" x2="6" y2="20" layer="21"/>
 </package>
+<package name="FONA_MINI_GSM">
+<pad name="VIO" x="1.905" y="1.905" drill="0.8" diameter="1.6764"/>
+<pad name="NS" x="1.905" y="4.445" drill="0.8" diameter="1.6764"/>
+<pad name="RX" x="1.905" y="6.985" drill="0.8" diameter="1.6764"/>
+<pad name="TX" x="1.905" y="9.525" drill="0.8" diameter="1.6764"/>
+<pad name="RI" x="1.905" y="12.065" drill="0.8" diameter="1.6764"/>
+<pad name="KEY" x="1.905" y="14.605" drill="0.8" diameter="1.6764"/>
+<pad name="PS" x="1.905" y="17.145" drill="0.8" diameter="1.6764"/>
+<pad name="RST" x="1.905" y="19.685" drill="0.8" diameter="1.6764"/>
+<pad name="-SPKR" x="1.905" y="22.225" drill="0.8" diameter="1.6764"/>
+<pad name="+SPKR" x="1.905" y="24.765" drill="0.8" diameter="1.6764"/>
+<pad name="GND" x="1.905" y="27.305" drill="0.8" diameter="1.6764"/>
+<pad name="BAT" x="1.905" y="29.845" drill="0.8" diameter="1.6764"/>
+<wire x1="0" y1="31.75" x2="0" y2="0" width="0.1524" layer="20"/>
+<wire x1="0" y1="0" x2="44.45" y2="0" width="0.1524" layer="20"/>
+<wire x1="44.45" y1="0" x2="44.45" y2="31.75" width="0.1524" layer="20"/>
+<wire x1="44.45" y1="31.75" x2="0" y2="31.75" width="0.1524" layer="20"/>
+</package>
 </packages>
 <symbols>
 <symbol name="ADA-3295">
@@ -1156,26 +1174,45 @@ Source: http://www.maxstream.net/products/xbee/datasheet_XBee_OEM_RF-Modules.pdf
 <pin name="VIN" x="27.94" y="0" length="middle" rot="R180"/>
 </symbol>
 <symbol name="DUAL-UART-MODULE-DFR0627">
-<pin name="VCC" x="-12.7" y="7.62" length="short"/>
-<pin name="GND" x="-12.7" y="5.08" length="short"/>
-<pin name="SCL" x="-12.7" y="2.54" length="short"/>
-<pin name="SDA" x="-12.7" y="0" length="short"/>
-<pin name="RST" x="-12.7" y="-2.54" length="short"/>
-<pin name="IRQ" x="-12.7" y="-5.08" length="short"/>
-<pin name="UART1+" x="15.24" y="12.7" length="short" rot="R180"/>
-<pin name="UART1-" x="15.24" y="10.16" length="short" rot="R180"/>
-<pin name="UART1T" x="15.24" y="7.62" length="short" rot="R180"/>
-<pin name="UART1R" x="15.24" y="5.08" length="short" rot="R180"/>
-<pin name="UART2+" x="15.24" y="-2.54" length="short" rot="R180"/>
-<pin name="UART2-" x="15.24" y="-5.08" length="short" rot="R180"/>
-<pin name="UART2T" x="15.24" y="-7.62" length="short" rot="R180"/>
-<pin name="UART2R" x="15.24" y="-10.16" length="short" rot="R180"/>
-<wire x1="-10.16" y1="17.78" x2="-10.16" y2="-15.24" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="-15.24" x2="12.7" y2="-15.24" width="0.254" layer="94"/>
-<wire x1="12.7" y1="-15.24" x2="12.7" y2="17.78" width="0.254" layer="94"/>
-<wire x1="12.7" y1="17.78" x2="-10.16" y2="17.78" width="0.254" layer="94"/>
-<text x="-10.16" y="20.32" size="1.778" layer="94">&gt;VALUE</text>
-<text x="-10.16" y="25.4" size="1.778" layer="94">&gt;NAME</text>
+<pin name="VCC" x="-12.7" y="7.62" visible="pin" length="short"/>
+<pin name="GND" x="-12.7" y="5.08" visible="pin" length="short"/>
+<pin name="SCL" x="-12.7" y="2.54" visible="pin" length="short"/>
+<pin name="SDA" x="-12.7" y="0" visible="pin" length="short"/>
+<pin name="RST" x="-12.7" y="-2.54" visible="pin" length="short"/>
+<pin name="IRQ" x="-12.7" y="-5.08" visible="pin" length="short"/>
+<pin name="UART1+" x="15.24" y="12.7" visible="pin" length="short" rot="R180"/>
+<pin name="UART1-" x="15.24" y="10.16" visible="pin" length="short" rot="R180"/>
+<pin name="UART1T" x="15.24" y="7.62" visible="pin" length="short" rot="R180"/>
+<pin name="UART1R" x="15.24" y="5.08" visible="pin" length="short" rot="R180"/>
+<pin name="UART2+" x="15.24" y="-2.54" visible="pin" length="short" rot="R180"/>
+<pin name="UART2-" x="15.24" y="-5.08" visible="pin" length="short" rot="R180"/>
+<pin name="UART2T" x="15.24" y="-7.62" visible="pin" length="short" rot="R180"/>
+<pin name="UART2R" x="15.24" y="-10.16" visible="pin" length="short" rot="R180"/>
+<wire x1="-10.16" y1="15.24" x2="-10.16" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="-12.7" x2="12.7" y2="-12.7" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-12.7" x2="12.7" y2="15.24" width="0.254" layer="94"/>
+<wire x1="12.7" y1="15.24" x2="-10.16" y2="15.24" width="0.254" layer="94"/>
+<text x="-10.16" y="16.002" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-10.16" y="19.304" size="1.778" layer="95">&gt;NAME</text>
+</symbol>
+<symbol name="FONA_MINI_GSM">
+<pin name="BAT" x="-5.08" y="33.02" length="middle" direction="pwr"/>
+<pin name="GND" x="-5.08" y="30.48" length="middle" direction="pwr"/>
+<pin name="+SPKR" x="-5.08" y="27.94" length="middle" direction="out"/>
+<pin name="-SPKR" x="-5.08" y="25.4" length="middle" direction="out"/>
+<pin name="RST" x="-5.08" y="22.86" length="middle" direction="in"/>
+<pin name="PS" x="-5.08" y="20.32" length="middle" direction="out"/>
+<pin name="KEY" x="-5.08" y="17.78" length="middle" direction="in"/>
+<pin name="TX" x="-5.08" y="12.7" length="middle" direction="out"/>
+<pin name="RI" x="-5.08" y="15.24" length="middle" direction="out"/>
+<pin name="RX" x="-5.08" y="10.16" length="middle" direction="in"/>
+<pin name="NS" x="-5.08" y="7.62" length="middle" direction="out"/>
+<pin name="VIO" x="-5.08" y="5.08" length="middle" direction="in"/>
+<wire x1="0" y1="38.1" x2="0" y2="0" width="0.1524" layer="94"/>
+<wire x1="0" y1="0" x2="27.94" y2="0" width="0.1524" layer="94"/>
+<wire x1="27.94" y1="0" x2="27.94" y2="38.1" width="0.1524" layer="94"/>
+<wire x1="27.94" y1="38.1" x2="0" y2="38.1" width="0.1524" layer="94"/>
+<text x="5.08" y="-2.54" size="1.778" layer="95">FONA mini GSM</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1638,6 +1675,32 @@ https://wiki.dfrobot.com/Gravity%3A%20IIC%20to%20Dual%20UART%20Module%20SKU%3A%2
 <connect gate="G$1" pin="UART2R" pad="UART2R"/>
 <connect gate="G$1" pin="UART2T" pad="UART2T"/>
 <connect gate="G$1" pin="VCC" pad="VCC"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FONA_MINI_GSM" uservalue="yes">
+<gates>
+<gate name="G$1" symbol="FONA_MINI_GSM" x="-17.78" y="-15.24"/>
+</gates>
+<devices>
+<device name="" package="FONA_MINI_GSM">
+<connects>
+<connect gate="G$1" pin="+SPKR" pad="+SPKR"/>
+<connect gate="G$1" pin="-SPKR" pad="-SPKR"/>
+<connect gate="G$1" pin="BAT" pad="BAT"/>
+<connect gate="G$1" pin="GND" pad="GND"/>
+<connect gate="G$1" pin="KEY" pad="KEY"/>
+<connect gate="G$1" pin="NS" pad="NS"/>
+<connect gate="G$1" pin="PS" pad="PS"/>
+<connect gate="G$1" pin="RI" pad="RI"/>
+<connect gate="G$1" pin="RST" pad="RST"/>
+<connect gate="G$1" pin="RX" pad="RX"/>
+<connect gate="G$1" pin="TX" pad="TX"/>
+<connect gate="G$1" pin="VIO" pad="VIO"/>
 </connects>
 <technologies>
 <technology name=""/>
